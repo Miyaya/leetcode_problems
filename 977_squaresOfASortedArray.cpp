@@ -41,3 +41,31 @@ public:
         return res;
     }
 };
+
+// 1. push_back太耗效能
+// 2. 不需要宣告2個vector
+// 3. 以下做法直觀且linear complexity
+// class Solution
+// {
+// public:
+//     vector<int> sortedSquares(vector<int> &nums)
+//     {
+//         int sz = nums.size();
+//         vector<int> ans(sz);
+//         int l = 0, r = sz - 1;
+//         while (sz--)
+//         {
+//             if (abs(nums[l]) > abs(nums[r]))
+//             {
+//                 ans[sz] = nums[l] * nums[l];
+//                 l++;
+//             }
+//             else
+//             {
+//                 ans[sz] = nums[r] * nums[r];
+//                 r--;
+//             }
+//         }
+//         return ans;
+//     }
+// };
