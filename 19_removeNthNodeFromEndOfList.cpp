@@ -35,4 +35,27 @@ public:
 
         return res;
     }
+
+    // ListNode *removeNthFromEnd(ListNode *head, int &n)
+    // {
+    //     if (!head)
+    //     {
+    //         return head;
+    //     }
+    //     ListNode *ret = removeNthFromEnd(head->next, n);
+    //     if ((--n) == 0)
+    //     {
+    //         return ret;
+    //     }
+    //     head->next = ret;
+    //     return head;
+    // }
+
+    // e.g.
+    // r1 ([1,2,3,4,5], n=2) -> return [1,2,3,5] (n==-3)
+    // r2 ([2,3,4,5], n=2) -> return [2,3,5] (n==-2)
+    // r3 ([3,4,5], n=2) -> return [3,5] (n==-1)
+    // r4 ([4,5], n=2) -> return [5] (n==0)
+    // r5 ([5], n=2) -> return [5] (n==1)
+    // r6 ([], n=2) -> return nullptr (n==2)
 };
